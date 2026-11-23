@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   quality:
-    name: Typecheck, lint, tests et build
+    name: Typecheck, lint et build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,15 +33,5 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Tests
-        run: npm test
-
       - name: Build
         run: npm run build
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: cefisi-dist
-          path: dist/
-          retention-days: 7

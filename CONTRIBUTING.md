@@ -27,7 +27,7 @@ git switch -c feat/42-filtre-formations
 
 3. Préfixes acceptés : `feat/`, `fix/`, `docs/`, `test/`, `refactor/`, `chore/`.
 4. Ouvrez une **pull request** vers `develop`, pas directement vers `main`.
-5. La CI doit être verte (typecheck, lint, tests, build).
+5. La CI doit être verte (typecheck, lint, build).
 6. Au moins **une review** d'un autre membre avant merge ; le merge se fait par squash.
 
 ## 3. Commits (Conventional Commits)
@@ -61,17 +61,19 @@ npm run check
 
 - **TypeScript strict** : pas de `any` (sauf justification en commentaire), pas de variables inutilisées.
 - **ESLint / Prettier** : `npm run lint:fix` puis `npm run format`.
-- **Tests** : chaque correction de bug ajoute un test de non-régression ; chaque besoin M du cahier des charges doit être couvert par un scénario du [plan de tests](./docs/03-plan-de-tests.md).
+- **Tests** : Vitest est installé mais aucun test n'existe encore. Quand les lots 3 à 7 seront implémentés, chaque correction de bug ajoutera un test de non-régression et chaque besoin M du cahier des charges sera couvert par un scénario du [plan de tests](./docs/03-plan-de-tests.md).
 - **Accessibilité** : navigation clavier, contrastes, textes alternatifs (RGAA AA).
 - **Sécurité** : aucun secret dans le code ni dans `.env` versionné ; les droits sont vérifiés côté API, jamais seulement dans le front.
 
 ## 5. Conventions de code
 
-- Composants en **PascalCase** (`FormationCard.tsx`), hooks et utilitaires en **camelCase**.
-- Un composant par fichier ; les composants partagés dans `src/components/`, le métier dans `src/features/`.
-- Imports avec l'alias `@/` (ex. `import { Button } from '@/components/ui/Button'`).
+> Le dépôt est **initialisé uniquement** : les dossiers et fichiers cités ci-dessous décrivent la structure **prévue** pour les lots 4 à 6. Ils seront créés par l'équipe au moment de l'implémentation ; ne les cherchez pas dès aujourd'hui.
+
+- Composants en **PascalCase** (ex. `FormationCard.tsx`, à créer au lot 4), hooks et utilitaires en **camelCase**.
+- Un composant par fichier ; structure prévue : composants partagés dans `src/components/`, métier dans `src/features/`.
+- Imports avec l'alias `@/` (déjà configuré dans `vite.config.ts`).
 - Libellés d'interface en **français** ; noms de variables en anglais.
-- Pas de `fetch` dans les composants : passer par `src/lib/api.ts`.
+- Pas de `fetch` éparpillé dans les composants : un client API centralisé `src/lib/api.ts` sera créé au lot 3.
 
 ## 6. Issues et PR
 

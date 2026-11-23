@@ -3,7 +3,7 @@
 [![CI](https://github.com/claraops/CEFISI/actions/workflows/ci.yml/badge.svg)](https://github.com/claraops/CEFISI/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![License](https://img.shields.io/badge/licence-Usage%20interne-lightgrey)](./CONTRIBUTING.md)
+[![Licence](https://img.shields.io/badge/licence-Usage%20p%C3%A9dagogique-lightgrey)](./LICENSE.md)
 
 > Socle initial du frontend de la refonte du site **CEFISI** (organisme de formation en informatique — reconversion et alternance).
 > Projet de Master 1 Informatique : **MOA** = l'enseignante (la cliente), **MOE** = l'équipe (nous).
@@ -57,7 +57,7 @@ npm run check        # typecheck + lint + tests + build
 npm run typecheck    # vérification des types
 npm run lint         # ESLint
 npm run format       # Prettier
-npm test             # Vitest
+npm test             # Vitest (aucun test pour l'instant — scripts prêts pour les lots 3 à 7)
 npm run build        # build de production dans dist/
 npm run preview      # prévisualiser le build
 ```
