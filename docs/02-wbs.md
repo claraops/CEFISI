@@ -5,16 +5,16 @@
 
 ## Vue d'ensemble
 
-| Lot | Nom                      | Besoins couverts | Échéance proposée | Statut           |
-| --- | ------------------------ | ---------------- | ----------------- | ---------------- |
-| 1   | Cadrage et maquettes     | Toutes           | 27 nov. 2026      | 🟨               |
-| 2   | Documents projet         | Toutes           | 4 déc. 2026       | 🟨               |
-| 3   | API, comptes et sécurité | F8–F11, N1–N3    | 8 déc. 2026       | 🟦               |
-| 4   | Site public              | F1–F7            | 8 déc. 2026       | 🟨 (socle livré) |
-| 5   | Back-office et pages     | F15–F19          | 10 déc. 2026      | 🟦               |
-| 6   | Intranet de documents    | F12–F14          | 10 déc. 2026      | 🟦               |
-| 7   | Tests et déploiement     | N5–N10           | 11 déc. 2026      | 🟦               |
-| 8   | Livraison / soutenance   | Tous             | 11 déc. 2026      | 🟦               |
+| Lot | Nom                      | Besoins couverts | Échéance proposée | Statut |
+| --- | ------------------------ | ---------------- | ----------------- | ------ |
+| 1   | Cadrage et maquettes     | Toutes           | 27 nov. 2026      | 🟨     |
+| 2   | Documents projet         | Toutes           | 4 déc. 2026       | 🟨     |
+| 3   | API, comptes et sécurité | F8–F11, N1–N3    | 8 déc. 2026       | 🟦     |
+| 4   | Site public              | F1–F7            | 8 déc. 2026       | 🟦     |
+| 5   | Back-office et pages     | F15–F19          | 10 déc. 2026      | 🟦     |
+| 6   | Intranet de documents    | F12–F14          | 10 déc. 2026      | 🟦     |
+| 7   | Tests et déploiement     | N5–N10           | 11 déc. 2026      | 🟦     |
+| 8   | Livraison / soutenance   | Tous             | 11 déc. 2026      | 🟦     |
 
 ## Lot 1 — Cadrage et maquettes
 
@@ -42,7 +42,7 @@
 - Paramètre `candidature.url` exposé au front (F6, H5).
 - **Livrables** : API conteneurisée, migrations, tests de sécurité par rôle.
 
-## Lot 4 — Site public ⭐ socle actuel
+## Lot 4 — Site public
 
 - Accueil : recrutement, rentrées, chiffres clés, financement, partenaires, labels (F1).
 - Catalogue avec recherche + filtre par niveau (F2).
@@ -50,7 +50,7 @@
 - Approche pédagogique et équipe (F4).
 - Contact avec consentement RGPD + honeypot anti-spam (F5).
 - Bouton « Candidater » configurable (F6) et lien réunion (F7).
-- **Livrables** : pages React accessibles, responsive, données de démonstration dans `src/data/`.
+- **Livrables** : pages React accessibles et responsive (contenu de référence à demander à la cliente).
 
 ## Lot 5 — Back-office et pages
 

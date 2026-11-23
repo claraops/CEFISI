@@ -8,6 +8,8 @@
 > Socle initial du frontend de la refonte du site **CEFISI** (organisme de formation en informatique — reconversion et alternance).
 > Projet de Master 1 Informatique : **MOA** = l'enseignante (la cliente), **MOE** = l'équipe (nous).
 > Dépôt : [github.com/claraops/CEFISI](https://github.com/claraops/CEFISI)
+>
+> ⚠️ **État actuel : initialisation uniquement.** Aucune page du site n'est implémentée. Le dépôt contient le socle de travail partagé : configuration React, documentation projet, CI et règles de collaboration.
 
 ---
 
@@ -75,14 +77,8 @@ npm run preview      # prévisualiser le build
 ├── .github/               # CI, templates d'issues et de PR, CODEOWNERS
 ├── public/                # Favicon, robots.txt
 ├── src/
-│   ├── app/               # Routeur, layouts, providers
-│   ├── components/        # Composants partagés (layout, ui)
-│   ├── features/          # Découpages métier
-│   ├── pages/             # Pages routées
-│   ├── data/              # Données de démonstration (temporaires)
-│   ├── lib/               # Client API et utilitaires
+│   ├── app/               # Point d'entrée de l'application (App.tsx)
 │   ├── config/            # Variables d'environnement typées
-│   ├── types/             # Modèle de données (12 entités)
 │   └── styles/            # Tailwind + thème daisyUI
 ├── .env.example
 └── package.json
@@ -92,7 +88,7 @@ npm run preview      # prévisualiser le build
 
 - [x] Socle React/TypeScript/Vite + Tailwind/daisyUI et CI
 - [x] Documentation projet (cahier des charges, WBS, plan de tests, architecture, charte)
-- [x] Site public : pages statiques avec données de démonstration
+- [ ] Site public : pages et fonctionnalités (à implémenter — lot 4)
 - [ ] Branchement API Spring Boot (lots 3 à 6)
 - [ ] Authentification et rôles
 - [ ] Intranet de documents protégés
@@ -120,7 +116,7 @@ Chaque tâche = une issue liée à une PR ; au moins une review avant merge.
 
 ## 🔒 Données et confidentialité
 
-Le code et les documents de démonstration sont destinés au projet de cours. Les documents réels de CEFISI, les comptes et les données personnelles ne doivent **jamais** être commités. Le formulaire de contact enregistre un consentement RGPD et les PDF sont servis exclusivement par l'API protégée.
+Le code est destiné au projet de cours. Les documents réels de CEFISI, les comptes et les données personnelles ne doivent **jamais** être commités. Le formulaire de contact et l'intranet seront implémentés avec un consentement RGPD et des PDF servis exclusivement par l'API protégée.
 
 ---
 

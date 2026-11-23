@@ -1,37 +1,19 @@
-import { Route, Routes } from 'react-router-dom'
-import { PortalLayout } from '@/app/layouts/PortalLayout'
-import { PublicLayout } from '@/app/layouts/PublicLayout'
-import { AdminPlaceholderPage } from '@/pages/AdminPlaceholderPage'
-import { ApprochePage } from '@/pages/ApprochePage'
-import { ConnexionPage } from '@/pages/ConnexionPage'
-import { ContactPage } from '@/pages/ContactPage'
-import { EquipePage } from '@/pages/EquipePage'
-import { FormationDetailPage } from '@/pages/FormationDetailPage'
-import { FormationsPage } from '@/pages/FormationsPage'
-import { HomePage } from '@/pages/HomePage'
-import { IntranetPlaceholderPage } from '@/pages/IntranetPlaceholderPage'
-import { NotFoundPage } from '@/pages/NotFoundPage'
-import { PolitiqueConfidentialitePage } from '@/pages/PolitiqueConfidentialitePage'
-
+/**
+ * Point d'entrée minimal du frontend CEFISI.
+ * Ce dépôt est une initialisation : les écrans et la logique métier seront
+ * ajoutés par l'équipe selon le cahier des charges et le WBS (docs/).
+ */
 export function App() {
   return (
-    <Routes>
-      <Route element={<PublicLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path="formations" element={<FormationsPage />} />
-        <Route path="formations/:slug" element={<FormationDetailPage />} />
-        <Route path="approche" element={<ApprochePage />} />
-        <Route path="equipe" element={<EquipePage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="confidentialite" element={<PolitiqueConfidentialitePage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-
-      <Route element={<PortalLayout />}>
-        <Route path="connexion" element={<ConnexionPage />} />
-        <Route path="intranet/*" element={<IntranetPlaceholderPage />} />
-        <Route path="admin/*" element={<AdminPlaceholderPage />} />
-      </Route>
-    </Routes>
+    <main className="grid min-h-screen place-items-center bg-base-200 px-6 text-center">
+      <div>
+        <span className="badge badge-primary">Socle initial</span>
+        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-brand-ink">CEFISI</h1>
+        <p className="mx-auto mt-4 max-w-md leading-relaxed text-slate-600">
+          Le projet est initialisé et prêt à être utilisé en équipe. Le site sera implémenté
+          conformément au cahier des charges et au WBS disponibles dans <code>docs/</code>.
+        </p>
+      </div>
+    </main>
   )
 }

@@ -190,10 +190,12 @@ Le front React interroge une **API Spring Boot**, seule à accéder à la base e
 
 ## 11. Traçabilité besoins → livrables
 
-| Besoins | Lot WBS                  | Livrable du socle React actuel                                                                                    |
-| ------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| F1–F7   | Site public              | Pages `Accueil`, `Formations`, `Fiche formation`, `Approche`, `Équipe`, `Contact` + config `VITE_CANDIDATURE_URL` |
-| F8–F11  | API, comptes et sécurité | Types `Utilisateur`/`Rôle`, client API, écran de connexion (structure prête, logique API à brancher)              |
-| F12–F14 | Intranet                 | Types `Dossier`/`Document`/`Inscription`, garde de rôle à brancher                                                |
-| F15–F19 | Back-office              | Types `Page`/`Paramètre`/`MessageContact`/`JournalConnexion`, squelette d'espace protégé                          |
-| N1–N10  | Tests et déploiement     | CI GitHub Actions, charte, plan de tests, `.env.example`                                                          |
+> Le dépôt est **initialisé uniquement** : aucune page ni logique métier n'est codée. Le tableau ci-dessous indique le lot auquel chaque besoin sera rattaché.
+
+| Besoins | Lot WBS                  | État dans le dépôt                                                            |
+| ------- | ------------------------ | ----------------------------------------------------------------------------- |
+| F1–F7   | Site public              | À implémenter (lot 4)                                                         |
+| F8–F11  | API, comptes et sécurité | À implémenter (lot 3)                                                         |
+| F12–F14 | Intranet                 | À implémenter (lot 6)                                                         |
+| F15–F19 | Back-office              | À implémenter (lot 5)                                                         |
+| N1–N10  | Tests et déploiement     | Outillage en place : CI GitHub Actions, charte, plan de tests, `.env.example` |

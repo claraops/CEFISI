@@ -24,7 +24,7 @@ flowchart TB
   UI -.->|"lien configurable uniquement"| EXT
 ```
 
-## 2. Couches du front (ce dépôt)
+## 2. Couches du front (structure cible — à créer)
 
 ```
 src/

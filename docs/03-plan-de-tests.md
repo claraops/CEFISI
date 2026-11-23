@@ -13,7 +13,7 @@
 | End-to-end      | Parcours complets par rôle                          | Playwright                                                  | Critères de recette |
 | Non fonctionnel | Responsive, accessibilité, performance, sécurité    | Playwright, axe, Lighthouse                                 | Global              |
 
-> Le socle initial installe les scripts et la structure de tests ; les premiers tests arrivent avec les lots 3 à 7.
+> Le socle initial fournit les scripts de test (Vitest) ; les tests et leur structure arrivent avec les lots 3 à 7.
 
 ## 2. Matrice de tests par rôle
 
