@@ -1,0 +1,7 @@
+contact_links:
+  - name: 📄 Documentation projet
+    url: https://github.com/claraops/CEFISI/tree/main/docs
+    about: Consulter le cahier des charges, le WBS et le plan de tests avant d'ouvrir une issue.
+  - name: ❓ Question client
+    url: https://github.com/claraops/CEFISI/issues/new?labels=question-client&title=%5BQuestion%20client%5D%20
+    about: Une zone d'ombre du cahier des charges ? Ajoutez-la au registre des hypothèses.

@@ -1,0 +1,64 @@
+name: 🐛 Bug
+description: Signaler un fonctionnement incorrect
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: Merci de décrire précisément le problème pour qu'il soit reproductible.
+  - type: input
+    id: besoin
+    attributes:
+      label: Besoin concerné
+      description: Identifiant du cahier des charges (ex. F5, N5)
+      placeholder: F5
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      placeholder: |
+        1. Aller sur /contact
+        2. Remplir sans cocher le consentement
+        3. Cliquer sur Envoyer
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Résultat attendu
+    validations:
+      required: true
+  - type: textarea
+    id: obtenu
+    attributes:
+      label: Résultat obtenu
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Rôle utilisé
+      options:
+        - Visiteur
+        - Étudiant
+        - Enseignant
+        - Admin
+        - Super admin
+    validations:
+      required: true
+  - type: input
+    id: environnement
+    attributes:
+      label: Environnement
+      placeholder: Chrome 130 / Windows 11 / 1440px
+    validations:
+      required: true
+  - type: textarea
+    id: captures
+    attributes:
+      label: Captures ou logs
+      render: shell
+    validations:
+      required: false
