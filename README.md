@@ -5,17 +5,17 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License](https://img.shields.io/badge/licence-Usage%20interne-lightgrey)](./CONTRIBUTING.md)
 
-> Socle initial du frontend de la refonte du site **CEFISI** (organisme de formation en informatique — reconversion et alternance).
-> Projet de Master 1 Informatique : **MOA** = l'enseignante (la cliente), **MOE** = l'équipe (nous).
+> Socle initial du frontend de la refonte du site CEFISI (organisme de formation en informatique reconversion et alternance).
+> Projet de Master 1 Informatique : MOA = l'enseignante (la cliente), MOE = l'équipe (nous).
 > Dépôt : [github.com/claraops/CEFISI](https://github.com/claraops/CEFISI)
 >
-> ⚠️ **État actuel : initialisation uniquement.** Aucune page du site n'est implémentée. Le dépôt contient le socle de travail partagé : configuration React, documentation projet, CI et règles de collaboration.
+> État actuel : initialisation uniquement.** Aucune page du site n'est implémentée. Le dépôt contient le socle de travail partagé : configuration React, documentation projet, CI et règles de collaboration.
 
 ---
 
-## 🎯 Périmètre
+##  Périmètre
 
-| ✅ Dans le périmètre                                         | ❌ Hors périmètre                          |
+|  Dans le périmètre                                         |  Hors périmètre                          |
 | ------------------------------------------------------------ | ------------------------------------------ |
 | Site public : accueil, formations, approche, équipe, contact | Formulaire et suivi de candidatures        |
 | Lien « Candidater » vers la plateforme existante             | Plateforme de candidatures (inchangée)     |
@@ -24,7 +24,7 @@
 
 **Échéance : 11 décembre 2026** — cahier des charges, WBS, solution déployable et démonstration.
 
-## 🧰 Stack
+## Stack
 
 | Couche          | Choix                                                    |
 | --------------- | -------------------------------------------------------- |
@@ -38,9 +38,9 @@
 
 > La stack est une **proposition de l'équipe**, à valider par la cliente — voir [ADR-0001](./docs/adr/0001-frontend-stack.md).
 
-## 🚀 Démarrage rapide
+## Démarrage rapide
 
-Prérequis : **Node.js 22+** et npm 10+ (fichier `.nvmrc` fourni).
+Prérequis : Node.js 22+ et npm 10+ (fichier `.nvmrc` fourni).
 
 ```bash
 git clone https://github.com/claraops/CEFISI.git
@@ -62,7 +62,7 @@ npm run build        # build de production dans dist/
 npm run preview      # prévisualiser le build
 ```
 
-## 🗂️ Structure du dépôt
+## Structure du dépôt
 
 ```
 .
@@ -84,7 +84,7 @@ npm run preview      # prévisualiser le build
 └── package.json
 ```
 
-## 🧭 État d'avancement
+##  État d'avancement
 
 - [x] Socle React/TypeScript/Vite + Tailwind/daisyUI et CI
 - [x] Documentation projet (cahier des charges, WBS, plan de tests, architecture, charte)
@@ -95,15 +95,15 @@ npm run preview      # prévisualiser le build
 - [ ] Back-office sans code
 - [ ] Déploiement Docker Compose + démo
 
-## 🤝 Travailler en groupe
+## Travailler en groupe
 
 Branches : `main` (déployable) · `develop` (intégration) · `feat/*`, `fix/*`, `docs/*`.
-Commits : **Conventional Commits** (`feat:`, `fix:`, `docs:`, `test:`, `chore:`, `refactor:`).
+Commits : Conventional Commits (`feat:`, `fix:`, `docs:`, `test:`, `chore:`, `refactor:`).
 Chaque tâche = une issue liée à une PR ; au moins une review avant merge.
 
-👉 Lisez [CONTRIBUTING.md](./CONTRIBUTING.md) avant votre première PR.
+     Lisez [CONTRIBUTING.md](./CONTRIBUTING.md) avant votre première PR.
 
-## 📚 Documentation
+## Documentation
 
 | Document                                                       | Contenu                                                                 |
 | -------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -114,10 +114,7 @@ Chaque tâche = une issue liée à une PR ; au moins une review avant merge.
 | [Charte graphique](./docs/05-charte-graphique.md)              | Palette bleu ciel, typographie, responsive, accessibilité               |
 | [Hypothèses & questions](./docs/06-hypotheses-et-questions.md) | Points à valider par la cliente, registre de décisions                  |
 
-## 🔒 Données et confidentialité
+##  Données et confidentialité
 
-Le code est destiné au projet de cours. Les documents réels de CEFISI, les comptes et les données personnelles ne doivent **jamais** être commités. Le formulaire de contact et l'intranet seront implémentés avec un consentement RGPD et des PDF servis exclusivement par l'API protégée.
-
----
 
 Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops).
