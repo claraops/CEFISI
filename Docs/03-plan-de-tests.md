@@ -71,7 +71,7 @@
 | N6 Charte           | Bleu ciel cohérent, pas de copier-coller du site actuel                          | Revue design                  |
 | N7 Performance      | Pages publiques < 2 s (connexion standard)                                       | Lighthouse                    |
 | N8 Accessibilité    | Contrastes AA, navigation clavier, alt, focus visible                            | axe + test clavier            |
-| N9 Maintenabilité   | `npm ci && npm run dev` depuis un clone propre                                   | CI                            |
+| N9 Maintenabilité   | `cd Front && npm ci && npm run dev` depuis un clone propre                                   | CI                            |
 | N10 Déploiement     | `docker compose up` puis démo                                                    | CI / machine de démo          |
 
 ## 5. Checklist de recette (à faire signer par la MOA)

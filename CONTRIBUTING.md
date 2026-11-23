@@ -1,38 +1,59 @@
 # Contribuer au projet CEFISI
 
-Merci de contribuer ! Ce dépôt est utilisé par une équipe : les règles ci-dessous garantissent que `main` reste déployable et que chacun peut comprendre l'historique.
+Merci de contribuer ! Nous sommes quatre sur le projet : un dossier et une branche par périmètre pour éviter les conflits.
 
-## 1. Prérequis
+## 1. Principe général
 
-- Node.js **22+** (voir `.nvmrc`), npm 10+.
-- Lire le [cahier des charges](./docs/01-cahier-des-charges.md) et le [WBS](./docs/02-wbs.md).
-- Configurer votre environnement : `cp .env.example .env`.
+Pour l'instant, **pas de pull request**. Le rythme est :
 
-## 2. Workflow Git
+1. chacun travaille sur **sa** branche et pousse avec des commits bien commentés ;
+2. la CI teste automatiquement à chaque push (front : typecheck, lint, build) ;
+3. on teste ensemble, puis on valide ;
+4. les PR vers `dev` puis `main` seront utilisées plus tard, quand les bases seront stables.
+
+Ne pas pousser directement sur `main`.
+
+## 2. Arborescence
 
 ```
-main       ← déployable à tout moment (jalons)
-  └── develop ← branche d'intégration
-        └── feat/42-filtre-formations ← branche de travail
+CEFISI/
+├── Docs/        # documentation projet        -> branche docs
+├── Front/       # application React            -> branche front
+├── Back/        # API Spring Boot              -> branche backend
+├── Docker/      # déploiement                  -> branche docker
+└── Database/    # scripts SQL                  -> branche database
 ```
 
-1. Créez ou prenez une **issue** (bug, tâche, question client).
-2. Créez votre branche depuis `develop` :
+Les dossiers `Back/`, `Docker/` et `Database/` contiennent un `.gitkeep` : ils sont prêts à recevoir le code de leur responsable.
+
+## 3. Branches
+
+| Branche    | Rôle                                 | Ne pas dériver sur              |
+| ---------- | ------------------------------------ | ------------------------------- |
+| `main`     | Branche principale, référence stable | aucune modification directe     |
+| `dev`      | Intégration et tests communs         | —                               |
+| `docs`     | Dossier `Docs/`                      | les autres dossiers             |
+| `front`    | Dossier `Front/`                     | les autres dossiers             |
+| `backend`  | Dossier `Back/`                      | les autres dossiers             |
+| `database` | Dossier `Database/`                  | les autres dossiers             |
+| `docker`   | Dossier `Docker/`                    | les autres dossiers             |
+
+## 4. Workflow actuel (sans PR)
 
 ```bash
-git switch develop
-git pull
-git switch -c feat/42-filtre-formations
+git switch front          # ou docs / backend / database / docker
+git pull --rebase origin front
+# ... modifications dans SON dossier uniquement ...
+git add -A
+git commit -m "feat(front): ajouter le composant X (F2)"
+git push
 ```
 
-3. Préfixes acceptés : `feat/`, `fix/`, `docs/`, `test/`, `refactor/`, `chore/`.
-4. Ouvrez une **pull request** vers `develop`, pas directement vers `main`.
-5. La CI doit être verte (typecheck, lint, tests, build).
-6. Au moins **une review** d'un autre membre avant merge ; le merge se fait par squash.
+Si vous travaillez sur plusieurs branches, pensez à `git switch` avant de modifier des fichiers. Un conflit se règle sur la branche de travail, jamais en écrasant `main`.
 
-## 3. Commits (Conventional Commits)
+## 5. Commits (Conventional Commits)
 
-Format : `type(portée): description courte à l'impératif`
+Format : `type(portée) : description courte à l'impératif`
 
 | Type       | Usage                                                  |
 | ---------- | ------------------------------------------------------ |
@@ -46,43 +67,50 @@ Format : `type(portée): description courte à l'impératif`
 Exemples :
 
 ```
-feat(formations): ajouter le filtre par niveau (F2)
-fix(contact): refuser l'envoi sans consentement RGPD (F5)
 docs(wbs): préciser les dépendances entre lots
+feat(front): ajouter le catalogue avec filtre par niveau (F2)
+fix(front): refuser l'envoi sans consentement RGPD (F5)
+chore(ci): adapter la CI au dossier Front/
 ```
 
-## 4. Qualité
+Le commentaire de commit doit permettre de comprendre le besoin couvert (F1–F19 / N1–N10) sans lire le diff.
+
+## 6. Qualité et tests
 
 Avant de pousser :
 
 ```bash
+cd Front
 npm run check
 ```
 
-- **TypeScript strict** : pas de `any` (sauf justification en commentaire), pas de variables inutilisées.
-- **ESLint / Prettier** : `npm run lint:fix` puis `npm run format`.
-- **Tests** : chaque correction de bug ajoute un test de non-régression ; chaque besoin M du cahier des charges doit être couvert par un scénario du [plan de tests](./docs/03-plan-de-tests.md).
-- **Accessibilité** : navigation clavier, contrastes, textes alternatifs (RGAA AA).
-- **Sécurité** : aucun secret dans le code ni dans `.env` versionné ; les droits sont vérifiés côté API, jamais seulement dans le front.
+- CI GitHub Actions : `typecheck`, `lint`, `build` uniquement (aucun test pour le moment ; Vitest est installé et prêt).
+- TypeScript strict : pas de `any` sans justification, pas de variables inutilisées.
+- ESLint / Prettier : `npm run lint:fix` puis `npm run format`.
+- Quand des tests seront ajoutés : chaque correction de bug aura un test de non-régression et chaque besoin M du cahier des charges sera couvert par un scénario du [plan de tests](./Docs/03-plan-de-tests.md).
+- Accessibilité : navigation clavier, contrastes, textes alternatifs (RGAA AA).
+- Sécurité : aucun secret dans le code ni dans `.env` versionné ; les droits sont vérifiés côté API, jamais seulement dans le front.
 
-## 5. Conventions de code
+## 7. Conventions de code (structure prévue)
 
-- Composants en **PascalCase** (`FormationCard.tsx`), hooks et utilitaires en **camelCase**.
-- Un composant par fichier ; les composants partagés dans `src/components/`, le métier dans `src/features/`.
-- Imports avec l'alias `@/` (ex. `import { Button } from '@/components/ui/Button'`).
-- Libellés d'interface en **français** ; noms de variables en anglais.
-- Pas de `fetch` dans les composants : passer par `src/lib/api.ts`.
+Le dépôt est en initialisation : les dossiers ci-dessous décrivent la structure **prévue** du frontend, à créer dans `Front/` au moment de l'implémentation.
 
-## 6. Issues et PR
+- Composants en PascalCase (ex. `FormationCard.tsx`), hooks et utilitaires en camelCase.
+- Un composant par fichier ; structure prévue : `Front/src/components/`, `Front/src/features/`.
+- Imports avec l'alias `@/` (déjà configuré dans `Front/vite.config.ts`).
+- Libellés d'interface en français ; noms de variables en anglais.
+- Pas de `fetch` éparpillé : un client API centralisé `Front/src/lib/api.ts` sera créé au lot 3.
 
-- Utilisez les templates fournis ; renseignez toujours le **besoin** (F1–F19 / N1–N10) concerné.
+## 8. Dossiers et PR (plus tard)
+
+- Utilisez les templates fournis ; renseignez toujours le besoin (F1–F19 / N1–N10) concerné.
 - Ajoutez les labels `lot-x` et `priorite:*`.
-- Dans la PR : description, captures si UI, cases à cocher (tests, docs, accessibilité), issue liée (`Closes #42`).
+- Quand on repassera aux PR : une PR par tâche, vers `dev`, avec description, captures si UI et issue liée (`Closes #42`).
 
-## 7. Décisions
+## 9. Décisions
 
-Toute décision structurante (stack, modèle de données, sécurité) se note dans `docs/adr/` en suivant le modèle de l'[ADR-0001](./docs/adr/0001-frontend-stack.md). Les questions ouvertes vont dans [06-hypotheses-et-questions.md](./docs/06-hypotheses-et-questions.md).
+Toute décision structurante (stack, modèle de données, sécurité) se note dans `Docs/adr/` en suivant le modèle de l'[ADR-0001](./Docs/adr/0001-frontend-stack.md). Les questions ouvertes vont dans [06-hypotheses-et-questions.md](./Docs/06-hypotheses-et-questions.md).
 
-## 8. Confidentialité
+## 10. Confidentialité
 
-Ne commitez **jamais** : mots de passe, tokens, données personnelles, PDF réels de CEFISI, fichiers `.env`. En cas de fuite, prévenez immédiatement l'équipe et rotationnez la valeur concernée.
+Ne commitez jamais : mots de passe, tokens, données personnelles, PDF réels de CEFISI, fichiers `.env`. En cas de fuite, prévenez immédiatement l'équipe et rotationnez la valeur concernée.

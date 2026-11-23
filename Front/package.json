@@ -15,8 +15,8 @@
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"*.{json,md,html,ts,js}\" \"docs/**/*.md\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"*.{json,md,html,ts,js}\" \"docs/**/*.md\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"*.{json,md,html,ts,js}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"*.{json,md,html,ts,js}\"",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
     "check": "npm run typecheck && npm run lint && npm run test && npm run build"

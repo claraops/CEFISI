@@ -150,7 +150,7 @@ Le front React interroge une **API Spring Boot**, seule à accéder à la base e
 | Fichiers    | Stockage disque servi par l'API                          | Aucun lien public vers les documents              |
 | Déploiement | GitHub, Docker Compose                                   | Déployable et reproductible                       |
 
-> La stack est une **proposition de l'équipe, à valider par la cliente** (cf. `docs/adr/0001-frontend-stack.md`).
+> La stack est une **proposition de l'équipe, à valider par la cliente** (cf. `./adr/0001-frontend-stack.md`).
 
 ## 8. Planning, livrables et WBS
 

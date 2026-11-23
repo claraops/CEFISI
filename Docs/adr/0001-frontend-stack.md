@@ -25,7 +25,7 @@ Utiliser **React 19 + TypeScript + Vite + React Router** pour le front, **Tailwi
 
 - Tailwind 4 et daisyUI 5 sont des versions récentes : la syntaxe du thème doit être vérifiée au build (fait dans ce socle).
 - React Router est utilisé en mode bibliothèque ; si la cliente demande du SSR, il faudra revoir (peu probable ici).
-- Les données sont temporairement des mocks `src/data/` : ils devront être remplacés par les endpoints réels au lot 3.
+- Les données sont temporairement des mocks `Front/src/data/` : ils devront être remplacés par les endpoints réels au lot 3.
 
 ## Alternatives écartées
 

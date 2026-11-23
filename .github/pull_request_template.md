@@ -14,7 +14,7 @@
 - [ ] Tests ajoutés ou mis à jour
 - [ ] Responsive vérifié (mobile / tablette / desktop)
 - [ ] Accessibilité vérifiée (clavier, contrastes, alt)
-- [ ] Documentation mise à jour si nécessaire (`docs/`, README)
+- [ ] Documentation mise à jour si nécessaire (`Docs/`, README)
 - [ ] Aucun secret ni donnée personnelle ajouté
 - [ ] Captures d'écran (si changement d'interface)
 

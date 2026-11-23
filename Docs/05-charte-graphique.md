@@ -43,7 +43,7 @@ Contraste visé : **AA (RGAA)** — par exemple texte `#0F172A` sur `#FFFFFF` (�
 | `alert`                           | Consentement RGPD, erreurs de formulaire                 |
 | `tabs`                            | Alternance programme / blocs de compétences              |
 
-Le thème `cefisi` est défini dans `src/styles/index.css` via `@plugin "daisyui/theme"`.
+Le thème `cefisi` est défini dans `Front/src/styles/index.css` via `@plugin "daisyui/theme"`.
 
 ## 5. Responsive
 

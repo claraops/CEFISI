@@ -27,7 +27,7 @@ flowchart TB
 ## 2. Couches du front (structure cible — à créer)
 
 ```
-src/
+Front/src/
 ├── app/          # composition : routeur, layouts, providers
 ├── components/   # composants partagés (layout + ui)
 ├── features/     # découpages métier (formations, contact, auth, intranet, admin)
@@ -42,13 +42,13 @@ src/
 Règles :
 
 - Une page ne contient **pas** de logique métier lourde : elle assemble des composants de `features/`.
-- Les appels API passent par `src/lib/api.ts` : aucun `fetch` éparpillé dans les composants.
-- Les données affichées aujourd'hui viennent de `src/data/` ; elles seront remplacées par les endpoints sans changer les composants (contrats typés dans `src/types/domain.ts`).
-- Variables d'environnement lues uniquement via `src/config/env.ts` (avec valeurs par défaut sûres).
+- Les appels API passent par `Front/src/lib/api.ts` : aucun `fetch` éparpillé dans les composants.
+- Les données affichées aujourd'hui viennent de `Front/src/data/` ; elles seront remplacées par les endpoints sans changer les composants (contrats typés dans `Front/src/types/domain.ts`).
+- Variables d'environnement lues uniquement via `Front/src/config/env.ts` (avec valeurs par défaut sûres).
 
 ## 3. Modèle de données côté front
 
-Les 12 entités du cahier des charges sont typées dans `src/types/domain.ts` : `Utilisateur`, `Role`, `Formation`, `Session`, `Inscription`, `Dossier`, `Document`, `Page`, `MessageContact`, `MembreEquipe`, `Parametre`, `JournalConnexion`.
+Les 12 entités du cahier des charges sont typées dans `Front/src/types/domain.ts` : `Utilisateur`, `Role`, `Formation`, `Session`, `Inscription`, `Dossier`, `Document`, `Page`, `MessageContact`, `MembreEquipe`, `Parametre`, `JournalConnexion`.
 
 ```mermaid
 erDiagram
@@ -112,8 +112,8 @@ erDiagram
 
 - **Dev** : `npm run dev` (Vite, proxy `/api` vers Spring Boot) + H2.
 - **Demo** : `docker compose up` (API + base + fichiers + front statique servi par un reverse proxy).
-- **CI** : GitHub Actions → `npm ci`, lint, typecheck, build à chaque PR.
-- `main` = branche déployable ; `develop` = branche d'intégration de groupe.
+- **CI** : GitHub Actions → `cd Front && npm ci`, typecheck, lint, build à chaque push.
+- `main` = branche principale et stable ; `dev` = branche d'intégration de groupe. Pas de PR pour l'instant : on pousse sur sa branche, on teste, puis on valide.
 
 ## 8. Décisions
 

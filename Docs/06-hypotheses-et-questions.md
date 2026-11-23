@@ -37,7 +37,7 @@
 
 ## 4. Modèle d'ADR
 
-Les décisions structurantes se notent dans `docs/adr/` :
+Les décisions structurantes se notent dans `Docs/adr/` :
 
 ```markdown
 # ADR-000X — Titre court

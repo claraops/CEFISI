@@ -26,11 +26,11 @@
 
 ## Lot 2 — Documents projet
 
-- Cahier des charges (ce dépôt : `docs/01-cahier-des-charges.md`).
+- Cahier des charges (ce dépôt : `Docs/01-cahier-des-charges.md`).
 - WBS (ce fichier).
-- Plan de tests (`docs/03-plan-de-tests.md`).
-- Architecture (`docs/04-architecture.md`) et charte (`docs/05-charte-graphique.md`).
-- **Livrables** : documents versionnés dans `docs/`, relus par la MOA.
+- Plan de tests (`Docs/03-plan-de-tests.md`).
+- Architecture (`Docs/04-architecture.md`) et charte (`Docs/05-charte-graphique.md`).
+- **Livrables** : documents versionnés dans `Docs/`, relus par la MOA.
 
 ## Lot 3 — API, comptes et sécurité
 
@@ -97,7 +97,7 @@ graph LR
 ## Rythme et rules de groupe
 
 - Point court quotidien (15 min) : fait / à faire / bloquants.
-- Chaque tâche = une **issue GitHub** avec label `lot-1` … `lot-7`, puis une **branche** `feat/<issue>-<slug>`.
-- Une PR = une review minimale d'un autre membre avant merge dans `develop`.
-- `main` reste déployable à tout moment ; les merges se font via `develop` → `main` aux jalons.
+- Chaque tâche = une **issue GitHub** avec label `lot-1` … `lot-7`, puis une **branche** dédiée par périmètre (`docs`, `front`, `backend`, `database`, `docker`).
+- Pour l'instant, pas de PR : chacun pousse sur sa branche avec des commits commentés, on teste, puis on valide. Les PR vers `dev` puis `main` arriveront plus tard.
+- `main` reste la branche principale et stable ; `dev` sert à l'intégration et aux tests communs.
 - Les besoins **M** priment sur les **S** : si le délai serre, F7, F17, F18, F19 sont les premiers remis à plus tard.
