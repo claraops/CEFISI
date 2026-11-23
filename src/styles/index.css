@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@plugin 'daisyui' {
+  themes:
+    cefisi --default,
+    dark --prefersdark;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'cefisi';
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f0f9ff;
+  --color-base-300: #e0f2fe;
+  --color-base-content: #0f172a;
+
+  --color-primary: #0ea5e9;
+  --color-primary-content: #ffffff;
+  --color-secondary: #0369a1;
+  --color-secondary-content: #ffffff;
+  --color-accent: #10b981;
+  --color-accent-content: #ffffff;
+  --color-neutral: #0f172a;
+  --color-neutral-content: #ffffff;
+
+  --color-info: #0ea5e9;
+  --color-info-content: #ffffff;
+  --color-success: #10b981;
+  --color-success-content: #ffffff;
+  --color-warning: #f59e0b;
+  --color-warning-content: #0f172a;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --color-brand-sky: #0ea5e9;
+  --color-brand-sky-light: #e0f2fe;
+  --color-brand-sky-dark: #0369a1;
+  --color-brand-mint: #10b981;
+  --color-brand-ink: #0f172a;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-base-100);
+    color: var(--color-base-content);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-sky-dark);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

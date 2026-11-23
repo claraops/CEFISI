@@ -1,0 +1,8 @@
+# Propriétaire par défaut du dépôt
+* @claraops
+
+# Documentation projet : relecture MOA/MOE attendue
+/docs/ @claraops
+
+# CI et configuration du dépôt
+/.github/ @claraops

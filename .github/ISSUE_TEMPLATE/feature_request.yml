@@ -1,0 +1,49 @@
+name: ✨ Tâche / Fonctionnalité
+description: Proposer une évolution ou découper un lot du WBS
+title: '[Feat] '
+labels: ['enhancement']
+body:
+  - type: input
+    id: besoin
+    attributes:
+      label: Besoin concerné
+      placeholder: F2 — Catalogue des formations avec recherche et filtre
+    validations:
+      required: true
+  - type: dropdown
+    id: lot
+    attributes:
+      label: Lot WBS
+      options:
+        - lot-1-cadrage
+        - lot-2-documents
+        - lot-3-api-securite
+        - lot-4-site-public
+        - lot-5-back-office
+        - lot-6-intranet
+        - lot-7-tests-deploiement
+    validations:
+      required: true
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte
+      description: Pourquoi cette tâche est-elle nécessaire ?
+    validations:
+      required: true
+  - type: textarea
+    id: criteres
+    attributes:
+      label: Critères d'acceptation
+      placeholder: |
+        - [ ] La recherche filtre par titre
+        - [ ] Le filtre par niveau fonctionne
+        - [ ] Un état vide explicite est affiché
+    validations:
+      required: true
+  - type: textarea
+    id: horsperimetre
+    attributes:
+      label: Hors périmètre
+    validations:
+      required: false
