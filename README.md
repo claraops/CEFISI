@@ -1,4 +1,4 @@
-# CEFISI - Refonte du site web
+# CEFISI — Refonte du site web
 
 [![CI](https://github.com/claraops/CEFISI/actions/workflows/ci.yml/badge.svg)](https://github.com/claraops/CEFISI/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
@@ -22,17 +22,17 @@
 | Intranet : dossiers et PDF protégés par rôle/inscription     | Wiki, messagerie, groupes, offres d'emploi |
 | Back-office : pages, contenus, comptes, messages             | SSO avec la plateforme de candidatures    |
 
-Échéance : 11 décembre 2026 - cahier des charges, WBS, solution déployable et démonstration.
+Échéance : 11 décembre 2026 — cahier des charges, WBS, solution déployable et démonstration.
 
 ## Structure du dépôt
 
 ```
 .
-├── Docs/                  # Documents projet (cahier des charges, WBS, ADR) - branche docs
-├── Front/                 # Application React/TypeScript/Vite - branche front
-├── Back/                  # API Spring Boot - branche backend
-├── Docker/                # Compose et déploiement - branche docker
-├── Database/              # Scripts SQL et migrations - branche database
+├── Docs/                  # Documents projet (cahier des charges, WBS, ADR) — branche docs
+├── Front/                 # Application React/TypeScript/Vite — branche front
+├── Back/                  # API Spring Boot — branche backend
+├── Docker/                # Compose et déploiement — branche docker
+├── Database/              # Scripts SQL et migrations — branche database
 ├── .github/               # CI, templates d'issues et de PR, CODEOWNERS
 ├── CONTRIBUTING.md        # Règles de travail en équipe
 ├── LICENSE.md             # Licence d'utilisation pédagogique
@@ -120,4 +120,4 @@ Le code est destiné au projet de cours. Les documents réels de CEFISI, les com
 
 ---
 
-Maintenu par l'équipe CEFISI - [@claraops](https://github.com/claraops).
+Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops).
