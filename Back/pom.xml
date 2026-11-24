@@ -11,8 +11,8 @@
 	<groupId>fr.upec</groupId>
 	<artifactId>cefisi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cefisi-api</name>
-	<description>API Spring Boot de la refonte du site CEFISI</description>
+	<name/>
+	<description/>
 	<url/>
 	<licenses>
 		<license/>

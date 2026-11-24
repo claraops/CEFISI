@@ -12,7 +12,7 @@ flowchart TB
     UI["React SPA<br/>(ce dépôt)"]
   end
   subgraph Server["Serveur"]
-    API["API Spring Boot 3 / Java 21<br/>Spring Security + JPA"]
+    API["API Spring Boot 4 / Java 21<br/>Spring Security + JPA"]
     DB[("PostgreSQL<br/>(H2 en dev)")]
     FS[("Stockage disque<br/>PDF / images")]
   end
