@@ -109,4 +109,4 @@ Le code est destiné au projet de cours. Les documents réels de CEFISI, les com
 
 ---
 
-Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops).
+Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops), [@Gaspard4i](https://github.com/Gaspard4i), [@edmilson9](https://github.com/edmilson9)
