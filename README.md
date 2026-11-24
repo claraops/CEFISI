@@ -62,11 +62,22 @@ Voir [CONTRIBUTING.md](./CONTRIBUTING.md) pour le détail.
 | Frontend        | React 19, TypeScript 5.9, Vite 8, React Router 7         |
 | Interface       | Tailwind CSS 4, daisyUI 5, thème `cefisi` (bleu ciel)    |
 | Qualité         | ESLint, Prettier, Vitest, GitHub Actions                 |
-| Backend (lot 3) | Java 21, Spring Boot 3, Spring Security, Spring Data JPA |
+| Backend (lot 3) | Java 21, Spring Boot 4, Spring Security, Spring Data JPA |
 | Base (lot 3)    | PostgreSQL (H2 en développement)                         |
 | Déploiement     | Docker Compose, GitHub                                   |
 
 Voir [ADR-0001](./Docs/adr/0001-frontend-stack.md).
+
+## Démarrage rapide (backend, Docker)
+
+Prérequis : Docker. Le Dockerfile du backend est dans `Back/` (copie dans `Docker/back/` pour le futur compose).
+
+```bash
+docker build -t cefisi-back ./Back
+docker run --rm -p 8080:8080 cefisi-back
+```
+
+L'API écoute sur <http://localhost:8080> (réponse 401 attendue : Spring Security est actif).
 
 ## Démarrage rapide (frontend)
 
@@ -102,6 +113,7 @@ npm run preview      # prévisualiser le build
 | [Architecture](./Docs/04-architecture.md)                      | Flux front/API/base/fichiers, contrat API proposé                       |
 | [Charte graphique](./Docs/05-charte-graphique.md)              | Palette bleu ciel, typographie, responsive, accessibilité               |
 | [Hypothèses & questions](./Docs/06-hypotheses-et-questions.md) | Points à valider par la cliente, registre de décisions                  |
+| [Backend](./Docs/07-backend.md)                                | Architecture n-tier, structure, règles de code, tests, Docker, CI       |
 
 ## Données et confidentialité
 
