@@ -107,6 +107,6 @@ npm run preview      # prévisualiser le build
 
 Le code est destiné au projet de cours. Les documents réels de CEFISI, les comptes et les données personnelles ne doivent jamais être commités. Le formulaire de contact et l'intranet seront implémentés avec un consentement RGPD et des PDF servis exclusivement par l'API protégée.
 
----
 
-Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops).
+
+Maintenu par l'équipe CEFISI :  [@claraops](https://github.com/claraops), [@Gaspard4i](https://github.com/Gaspard4i), [@edmilson9](https://github.com/edmilson9)
