@@ -113,6 +113,7 @@ npm run preview      # prévisualiser le build
 | [Architecture](./Docs/04-architecture.md)                      | Flux front/API/base/fichiers, contrat API proposé                       |
 | [Charte graphique](./Docs/05-charte-graphique.md)              | Palette bleu ciel, typographie, responsive, accessibilité               |
 | [Hypothèses & questions](./Docs/06-hypotheses-et-questions.md) | Points à valider par la cliente, registre de décisions                  |
+| [Backend](./Docs/07-backend.md)                                | Architecture n-tier, structure, règles de code, tests, Docker, CI       |
 
 ## Données et confidentialité
 
