@@ -1,4 +1,4 @@
-# CEFISI — Refonte du site web
+# CEFISI : Refonte du site web
 
 [![CI](https://github.com/claraops/CEFISI/actions/workflows/ci.yml/badge.svg)](https://github.com/claraops/CEFISI/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
@@ -109,4 +109,4 @@ Le code est destiné au projet de cours. Les documents réels de CEFISI, les com
 
 ---
 
-Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops).
+Maintenu par l'équipe CEFISI — [@claraops](https://github.com/claraops), [@Gaspard4i](https://github.com/Gaspard4i), [@edmilson9](https://github.com/edmilson9)
