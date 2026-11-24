@@ -37,3 +37,34 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  back:
+    name: Back - tests et couverture
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Back
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verifier la copie du Dockerfile dans Docker/
+        run: diff Dockerfile ../Docker/back/Dockerfile || (echo "Lancer Docker/sync.sh puis commiter" && exit 1)
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+          cache-dependency-path: Back/pom.xml
+
+      - name: Tests et rapport JaCoCo
+        run: ./mvnw -B verify
+
+      - name: Rapport de couverture
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: Back/target/site/jacoco
+          retention-days: 7
