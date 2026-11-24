@@ -6,7 +6,7 @@
 
 ## Contexte
 
-Le site doit être responsive, sécurisé, moderne, fidèle à une charte bleu ciel et modifiable sans code via un back-office. Le projet est réalisé en groupe avec une échéance courte (11 décembre 2026) et doit être déployable/démontrable. L'API sera développée en Java 21 / Spring Boot 3.
+Le site doit être responsive, sécurisé, moderne, fidèle à une charte bleu ciel et modifiable sans code via un back-office. Le projet est réalisé en groupe avec une échéance courte (11 décembre 2026) et doit être déployable/démontrable. L'API sera développée en Java 21 / Spring Boot 4.
 
 ## Décision
 

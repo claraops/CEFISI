@@ -34,7 +34,7 @@
 
 ## Lot 3 — API, comptes et sécurité
 
-- API Spring Boot 3 / Java 21, PostgreSQL (H2 en dev), Spring Data JPA.
+- API Spring Boot 4 / Java 21, PostgreSQL (H2 en dev), Spring Data JPA.
 - Authentification identifiant ou email + mot de passe, réinitialisation (F8).
 - Quatre rôles et contrôle d'accès serveur (F9, N1).
 - Blocage après échecs répétés + déblocage admin (F10, N2).

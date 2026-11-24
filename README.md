@@ -62,7 +62,7 @@ Voir [CONTRIBUTING.md](./CONTRIBUTING.md) pour le détail.
 | Frontend        | React 19, TypeScript 5.9, Vite 8, React Router 7         |
 | Interface       | Tailwind CSS 4, daisyUI 5, thème `cefisi` (bleu ciel)    |
 | Qualité         | ESLint, Prettier, Vitest, GitHub Actions                 |
-| Backend (lot 3) | Java 21, Spring Boot 3, Spring Security, Spring Data JPA |
+| Backend (lot 3) | Java 21, Spring Boot 4, Spring Security, Spring Data JPA |
 | Base (lot 3)    | PostgreSQL (H2 en développement)                         |
 | Déploiement     | Docker Compose, GitHub                                   |
 

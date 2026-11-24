@@ -145,7 +145,7 @@ Le front React interroge une **API Spring Boot**, seule à accéder à la base e
 | ----------- | -------------------------------------------------------- | ------------------------------------------------- |
 | Frontend    | React, TypeScript, Vite, React Router                    | Choix de l'équipe, application responsive         |
 | Interface   | Tailwind CSS, DaisyUI                                    | Composants prêts, thème bleu ciel personnalisable |
-| Backend     | Java 21, Spring Boot 3, Spring Security, Spring Data JPA | Gestion native des rôles et de l'authentification |
+| Backend     | Java 21, Spring Boot 4, Spring Security, Spring Data JPA | Gestion native des rôles et de l'authentification |
 | Base        | PostgreSQL (H2 en développement)                         | Relationnelle fiable, installation simple         |
 | Fichiers    | Stockage disque servi par l'API                          | Aucun lien public vers les documents              |
 | Déploiement | GitHub, Docker Compose                                   | Déployable et reproductible                       |
